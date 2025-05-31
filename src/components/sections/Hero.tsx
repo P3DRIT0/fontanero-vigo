@@ -2,15 +2,15 @@ import React from 'react';
 
 const PremiumPlumbingHero: React.FC = () => {
   return (
-    <section className="relative bg-gradient-to-br from-blue-900 to-blue-700 text-white  flex items-center overflow-hidden">
+    <section className="relative bg-gradient-to-br from-blue-900 to-blue-700 text-white flex items-center overflow-hidden">
       {/* Fondo de imagen + overlay */}
       <div className="absolute inset-0">
-        <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1605152276897-4f618f831968?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80')] bg-cover bg-center opacity-20"></div>
+        <div className="absolute inset-0 bg-[url('https://cdn.pixabay.com/photo/2017/09/26/11/11/plumber-2788334_960_720.jpg')] bg-cover bg-center opacity-20"></div>
         <div className="absolute inset-0 bg-gradient-to-r from-blue-900/90 to-blue-900/60"></div>
       </div>
 
       {/* Contenido principal */}
-      <div className="container mx-auto px-6 relative z-10 py-20">
+      <div className="container mx-auto px-6 relative z-10 py-10 lg:py-20">
         <div className="max-w-2xl">
           <div className="mb-8 flex items-center">
             <div className="w-16 h-1 bg-blue-400 mr-4"></div>
@@ -18,12 +18,14 @@ const PremiumPlumbingHero: React.FC = () => {
           </div>
 
           <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold mb-8 leading-tight">
-            <span className="block mb-4">Expertos en</span>
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-300 to-blue-100">Soluciones de Fontanería</span>
+            <span className="block mb-4">Fontaneros en</span>
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-300 to-blue-100">Vigo</span>
           </h1>
 
           <p className="text-xl md:text-2xl mb-12 text-blue-100 max-w-lg leading-relaxed">
-            Más de 15 años resolviendo emergencias con tecnología de vanguardia y atención personalizada. Tu satisfacción está garantizada.
+            Más de 15 años resolviendo emergencias de fontanería en Vigo con tecnología de vanguardia y atención personalizada. 
+            Somos tu <strong>fontanero 24 horas en Vigo</strong> para reparaciones urgentes, bajantes y servicios a domicilio. 
+            Tu satisfacción está garantizada.
           </p>
 
           {/* Botones CTA */}
@@ -61,17 +63,17 @@ const PremiumPlumbingHero: React.FC = () => {
           {
             icon: 'fa-shield-alt',
             title: 'Garantía Total',
-            desc: 'Todos nuestros trabajos incluyen 2 años de garantía escrita',
+            desc: 'Todos nuestros trabajos de fontanería en Vigo incluyen 2 años de garantía escrita',
           },
           {
             icon: 'fa-bolt',
             title: 'Respuesta Rápida',
-            desc: 'Técnicos en tu domicilio en menos de 45 minutos',
+            desc: 'Fontaneros a domicilio en tu ubicación en menos de 45 minutos, 24 horas al día',
           },
           {
             icon: 'fa-euro-sign',
             title: 'Precio Transparente',
-            desc: 'Presupuesto cerrado sin sorpresas',
+            desc: 'Presupuesto cerrado para reparación de bajantes y otros servicios sin sorpresas',
           },
         ].map(({ icon, title, desc }, i) => (
           <div

@@ -4,13 +4,13 @@ import { MdOutlinePlumbing } from 'react-icons/md';
 
 const Services: React.FC = () => {
   return (
-    <section className="relative bg-gray-50 py-24 overflow-hidden">
+    <section className="relative bg-gray-50 py-10 lg:py-20 overflow-hidden">
       {/* Efecto de agua decorativo */}
       <div className="absolute top-0 left-0 w-full h-32 bg-gradient-to-b from-blue-900/5 to-transparent z-0"></div>
       
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         {/* Encabezado con efecto premium */}
-        <div className="text-center mb-20 max-w-4xl mx-auto">
+        <div className="text-center mb-10 lg:mb-20 max-w-4xl mx-auto">
           <span className="inline-block bg-blue-100 text-blue-800 px-4 py-1 rounded-full text-sm font-semibold mb-4">
             Soluciones profesionales
           </span>
@@ -22,7 +22,7 @@ const Services: React.FC = () => {
           </div>
           <p className="text-xl text-gray-600">
             Más de 15 años resolviendo problemas de fontanería con tecnología avanzada y atención personalizada.
-            <br className="hidden md:block" /> Garantía de satisfacción en todos nuestros trabajos.
+            <br className="hidden md:block" /> Garantía de satisfacción en todos nuestros trabajos como <strong>fontaneros en Vigo</strong>.
           </p>
         </div>
 
@@ -34,7 +34,7 @@ const Services: React.FC = () => {
               <div className="bg-gradient-to-br from-blue-600 to-blue-400 w-16 h-16 rounded-2xl flex items-center justify-center mb-6 text-white">
                 <MdOutlinePlumbing className="text-2xl" />
               </div>
-              <h3 className="text-2xl font-bold text-gray-900 mb-4">Desatascos de tuberías en Vigo</h3>
+              <h3 className="text-2xl font-bold text-gray-900 mb-4">Desatascos y reparación de bajantes en Vigo</h3>
               <p className="text-gray-600 mb-6">
                 Eliminamos obstrucciones en tuberías, bajantes y desagües con tecnología de última generación sin necesidad de obras.
               </p>
@@ -67,6 +67,7 @@ const Services: React.FC = () => {
               <h3 className="text-2xl font-bold text-gray-900 mb-4">Reparación de fugas de agua</h3>
               <p className="text-gray-600 mb-6">
                 Localización y reparación de fugas ocultas con geófonos y tecnología termográfica sin necesidad de romper.
+                Servicio disponible como <strong>fontaneros a domicilio</strong> en toda Vigo.
               </p>
               <ul className="space-y-2 mb-6">
                 <li className="flex items-center text-gray-600">
@@ -97,6 +98,7 @@ const Services: React.FC = () => {
               <h3 className="text-2xl font-bold text-gray-900 mb-4">Instalación de grifería y sanitarios</h3>
               <p className="text-gray-600 mb-6">
                 Instalación profesional de baños completos, cocinas y reformas con las mejores marcas del mercado.
+                Servicio completo de <strong>fontanería en Vigo</strong> para particulares y empresas.
               </p>
               <ul className="space-y-2 mb-6">
                 <li className="flex items-center text-gray-600">
@@ -127,6 +129,7 @@ const Services: React.FC = () => {
               <h3 className="text-2xl font-bold text-gray-900 mb-4">Fontanería urgente 24h en Vigo</h3>
               <p className="text-gray-600 mb-6">
                 Servicio de emergencia disponible las 24 horas para resolver cualquier imprevisto con la máxima rapidez.
+                Somos tu <strong>fontanero 24 horas en Vigo</strong> para cualquier urgencia.
               </p>
               <ul className="space-y-2 mb-6">
                 <li className="flex items-center text-gray-600">
@@ -157,6 +160,7 @@ const Services: React.FC = () => {
               <h3 className="text-2xl font-bold text-gray-900 mb-4">Cambio de calentadores y termos</h3>
               <p className="text-gray-600 mb-6">
                 Instalación y mantenimiento de sistemas de agua caliente con máxima eficiencia energética.
+                Especialistas en <strong>fontanería Vigo</strong> para instalaciones de gas y agua.
               </p>
               <ul className="space-y-2 mb-6">
                 <li className="flex items-center text-gray-600">
@@ -187,6 +191,7 @@ const Services: React.FC = () => {
               <h3 className="text-2xl font-bold text-gray-900 mb-4">Mantenimiento de comunidades</h3>
               <p className="text-gray-600 mb-6">
                 Servicios periódicos de mantenimiento preventivo para comunidades de vecinos y locales comerciales.
+                <strong>Fontaneros en Vigo</strong> especializados en grandes instalaciones.
               </p>
               <ul className="space-y-2 mb-6">
                 <li className="flex items-center text-gray-600">
@@ -210,7 +215,7 @@ const Services: React.FC = () => {
         </div>
 
         {/* CTA premium */}
-        <div className="mt-20 text-center">
+        <div className="mt-10 lg:mt-20 text-center">
           <div className="bg-gradient-to-r from-blue-600 to-blue-500 rounded-2xl p-0.5 inline-block">
             <a 
               href="#contacto" 

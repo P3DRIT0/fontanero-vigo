@@ -1,9 +1,10 @@
 import React from 'react';
 import { FaMapMarkedAlt, FaPhoneAlt, FaCarAlt } from 'react-icons/fa';
 
+
 const CoverageSection: React.FC = () => {
   return (
-    <section className="relative py-24 overflow-hidden bg-gradient-to-b from-blue-50 to-white">
+    <section className="relative py-10 lg:py-20 overflow-hidden bg-gradient-to-b from-blue-50 to-white">
       {/* Elemento decorativo */}
       <div className="absolute top-0 right-0 opacity-10">
         <svg width="400" height="400" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
@@ -17,61 +18,66 @@ const CoverageSection: React.FC = () => {
           <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6 leading-tight">
             <span className="relative inline-block">
               <span className="absolute inset-x-0 bottom-2 h-3 bg-blue-200/50 z-0"></span>
-              <span className="relative z-10">Cobertura en Vigo</span>
+              <span className="relative z-10">Fontaneros en</span>
             </span>
-            <br />y <span className="text-blue-600">municipios limítrofes</span>
+            <span className="text-blue-600 ml-2">Vigo y alrededores</span>
           </h2>
+
           <p className="text-lg md:text-xl text-gray-600">
-            Servicio de fontanería con desplazamiento rápido en toda el área metropolitana.
-            <br className="hidden md:block" /> Llegamos en menos de 45 minutos a cualquier punto.
+            Servicio de <strong>fontanería 24 horas en Vigo</strong> con desplazamiento rápido en toda el área metropolitana.
+            <br className="hidden md:block" /> <strong>Fontaneros a domicilio</strong> en menos de 45 minutos.
           </p>
         </div>
 
         {/* Mapa interactivo visual */}
         <div className="relative bg-white rounded-3xl shadow-2xl overflow-hidden border border-gray-100 mb-16 max-w-6xl mx-auto">
-          
-          <div className="aspect-w-16 aspect-h-9 w-full h-80 bg-blue-50 relative">
-            {/* Mapa simulado con puntos */}
+
+          <div className="aspect-w-16 aspect-h-9 w-full h-80 relative">
+            {/* Mapa de Vigo como fondo */}
+            <div className="absolute inset-0 bg-gray-100 overflow-hidden">
+              <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d10836.53136666831!2d-8.714933908334777!3d42.228754412501004!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1ses!2ses!4v1748684338157!5m2!1ses!2ses" width="100%" height="450"></iframe>
+            </div>
+
+            {/* Puntos del mapa */}
             <div className="absolute inset-0 flex items-center justify-center">
               <div className="relative w-full h-full">
-                {/* Puntos del mapa */}
                 {[
-                  { top: '30%', left: '40%', name: 'Vigo Centro' },
-                  { top: '50%', left: '35%', name: 'Coia' },
-                  { top: '60%', left: '45%', name: 'Teis' },
-                  { top: '55%', left: '55%', name: 'Bouzas' },
-                  { top: '40%', left: '30%', name: 'Navia' },
-                  { top: '35%', left: '50%', name: 'Traviesas' },
-                  { top: '65%', left: '60%', name: 'Alcabre' },
-                  { top: '25%', left: '60%', name: 'Redondela' },
-                  { top: '20%', left: '30%', name: 'Mos' },
-                  { top: '70%', left: '30%', name: 'Nigrán' },
+                  { top: '30%', left: '40%' },
+                  { top: '50%', left: '35%' },
+                  { top: '60%', left: '45%' },
+                  { top: '55%', left: '55%' },
+                  { top: '40%', left: '30%' },
+                  { top: '75%', left: '50%' },
+                  { top: '85%', left: '65%' },
+                  { top: '60%', left: '70%' },
+                  { top: '25%', left: '60%' },
+                  { top: '70%', left: '30%' },
                 ].map((location, index) => (
-                  <div 
+                  <div
                     key={index}
-                    className={`absolute w-4 h-4 rounded-full ${index < 7 ? 'bg-blue-600 border-2 border-white' : 'bg-blue-400 border-2 border-white'} transform -translate-x-1/2 -translate-y-1/2 cursor-pointer group`}
+                    className={`absolute w-4 h-4 rounded-full ${index < 7 ? 'bg-blue-600 border-2 border-white' : 'bg-blue-400 border-2 border-white'} transform  group`}
                     style={{ top: location.top, left: location.left }}
                   >
-                    <div className="absolute -bottom-8 left-1/2 transform -translate-x-1/2 opacity-0 group-hover:opacity-100 transition-opacity duration-200 bg-white shadow-md px-3 py-1 rounded-lg text-sm font-medium whitespace-nowrap">
-                      {location.name}
-                    </div>
+                    {/* PING CENTRADO */}
+                    <div className="absolute w-4 h-4 rounded-full bg-blue-400 opacity-75 animate-ping transform"></div>
                   </div>
                 ))}
               </div>
             </div>
+
           </div>
 
           <div className="p-8 md:p-10 bg-gradient-to-r from-blue-600 to-blue-500 text-white">
             <div className="flex flex-col md:flex-row justify-between items-center">
               <div className="mb-4 md:mb-0">
-                <h3 className="text-xl font-bold mb-2">¿No encuentras tu zona?</h3>
-                <p className="opacity-90">Tenemos cobertura en toda el área metropolitana de Vigo</p>
+                <h3 className="text-xl font-bold mb-2">¿Necesitas un <strong>fontanero en Vigo</strong> urgente?</h3>
+                <p className="opacity-90">Cobertura en toda el área metropolitana y <strong>reparación de bajantes</strong></p>
               </div>
-              <a 
-                href="tel:+34666666666" 
+              <a
+                href="tel:+34666666666"
                 className="flex items-center bg-white text-blue-600 font-bold py-3 px-6 rounded-full hover:bg-gray-100 transition-colors"
               >
-                <FaPhoneAlt className="mr-2" /> Consultar disponibilidad
+                <FaPhoneAlt className="mr-2" /> Llamar a fontanero
               </a>
             </div>
           </div>
@@ -79,26 +85,33 @@ const CoverageSection: React.FC = () => {
 
         {/* Listado de zonas con nuevo diseño */}
         <div className="max-w-5xl mx-auto">
-          <h3 className="text-2xl font-bold text-center text-gray-900 mb-8">Barrios y zonas principales que cubrimos</h3>
-          
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
-            {[
-              'Vigo Centro', 'Coia', 'Teis', 'Bouzas', 'Navia', 
-              'Traviesas', 'Alcabre', 'Redondela', 'Mos', 'Nigrán',
-              'Cangas', 'Gondomar', 'Porriño', 'Baiona', 'Pontevedra'
-            ].map((zone, index) => (
-              <div 
-                key={index} 
-                className="flex items-center bg-white/90 backdrop-blur-sm rounded-lg p-4 border border-gray-200 hover:border-blue-300 transition-colors"
-              >
-                <div className="bg-blue-100 text-blue-600 p-2 rounded-lg mr-3">
-                  <FaMapMarkedAlt />
-                </div>
-                <span className="font-medium text-gray-800">{zone}</span>
-              </div>
-            ))}
+  <h3 className="text-2xl font-bold text-center text-gray-900 mb-8">
+    Zonas donde actuamos como <span className="text-blue-600">fontaneros en Vigo</span>
+  </h3>
+
+  <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+    {[
+      'Vigo Centro', 'Coia', 'Teis', 'Bouzas', 'Navia',
+      'Traviesas', 'Alcabre', 'Redondela', 'Mos', 'Nigrán',
+      'Cangas', 'Gondomar', 'Porriño', 'Baiona', 'Pontevedra'
+    ].map((zone, index) => {
+      const isHiddenOnSmallScreens = index >= 6 ? 'hidden lg:flex' : 'flex';
+      return (
+        <div
+          key={index}
+          className={`${isHiddenOnSmallScreens} items-center bg-white/90 backdrop-blur-sm rounded-lg p-4 border border-gray-200 hover:border-blue-300 transition-colors`}
+        >
+          <div className="bg-blue-100 text-blue-600 p-2 rounded-lg mr-3">
+            <FaMapMarkedAlt />
           </div>
+          <span className="font-medium text-gray-800">
+            {index < 7 ? <strong>Fontaneros {zone}</strong> : `Fontaneros ${zone}`}
+          </span>
         </div>
+      );
+    })}
+  </div>
+</div>
 
         {/* Info adicional */}
         <div className="mt-16 grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
@@ -107,9 +120,9 @@ const CoverageSection: React.FC = () => {
               <div className="bg-blue-100 text-blue-600 p-3 rounded-full mr-4">
                 <FaCarAlt className="text-xl" />
               </div>
-              <h4 className="text-lg font-bold text-gray-900">Desplazamiento rápido</h4>
+              <h4 className="text-lg font-bold text-gray-900"><strong>Fontanero a domicilio</strong> rápido</h4>
             </div>
-            <p className="text-gray-600">Llegamos en menos de 45 minutos a cualquier punto de Vigo, 24 horas al día.</p>
+            <p className="text-gray-600">Llegamos en menos de 45 minutos a cualquier punto de Vigo, servicio <strong>24 horas</strong>.</p>
           </div>
 
           <div className="bg-white p-6 rounded-xl shadow-md border border-gray-100">
@@ -119,9 +132,9 @@ const CoverageSection: React.FC = () => {
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
                 </svg>
               </div>
-              <h4 className="text-lg font-bold text-gray-900">Horario flexible</h4>
+              <h4 className="text-lg font-bold text-gray-900"><strong>Fontanería Vigo</strong> 24h</h4>
             </div>
-            <p className="text-gray-600">Adaptamos nuestro horario a tus necesidades, incluso fines de semana y festivos.</p>
+            <p className="text-gray-600">Servicio de <strong>fontaneros urgentes</strong> todos los días, incluidos festivos.</p>
           </div>
 
           <div className="bg-white p-6 rounded-xl shadow-md border border-gray-100">
@@ -131,9 +144,9 @@ const CoverageSection: React.FC = () => {
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 15a4 4 0 004 4h9a5 5 0 10-.1-9.999 5.002 5.002 0 10-9.78 2.096A4.001 4.001 0 003 15z" />
                 </svg>
               </div>
-              <h4 className="text-lg font-bold text-gray-900">Zona ampliada</h4>
+              <h4 className="text-lg font-bold text-gray-900">Área de <strong>fontaneros Vigo</strong></h4>
             </div>
-            <p className="text-gray-600">Cobertura extendida a municipios cercanos con tarifas especiales para desplazamientos.</p>
+            <p className="text-gray-600">Cobertura extendida a municipios cercanos con <strong>reparación de bajantes</strong> incluida.</p>
           </div>
         </div>
       </div>

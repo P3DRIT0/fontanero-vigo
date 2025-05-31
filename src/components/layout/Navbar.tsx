@@ -13,21 +13,22 @@ export const Navbar = () => {
     <>
       {/* Barra de emergencia premium */}
       <div className="bg-gradient-to-r from-blue-800 to-blue-600 text-white text-center py-3 px-4 shadow-md">
-        <div className="container mx-auto flex flex-col md:flex-row justify-between items-center text-sm">
-          <div className="flex items-center gap-3 mb-2 md:mb-0">    
+        <div className="container mx-auto flex flex-col md:flex-row lg:justify-between items-center text-sm text-center md:text-left">
+          <div className="flex items-center gap-3 mb-2 md:mb-0 justify-center w-full md:w-auto">
             <div className="hidden md:flex items-center gap-2 bg-white/10 px-3 py-1 rounded-full">
               <FaShieldAlt className="text-blue-200" />
               <span className="font-medium">Garantía en todos nuestros trabajos</span>
             </div>
           </div>
-          <a 
+          <a
             href={`tel:${phoneNumber}`}
-            className="font-bold hover:underline flex items-center gap-2 bg-white/20 hover:bg-white/30 px-4 py-2 rounded-lg transition-all duration-200"
+            className="font-bold hover:underline flex items-center gap-2 bg-white/20 hover:bg-white/30 px-4 py-2 rounded-lg transition-all duration-200 justify-center md:justify-start w-full lg:w-auto mx-auto md:mx-0  hover:text-blue-100"
           >
             <FaPhone className="text-blue-200" /> {SITE_CONFIG.contact.phone}
           </a>
         </div>
       </div>
+
 
       {/* Navbar principal premium */}
       <header className="bg-white/90 backdrop-blur-sm shadow-sm sticky top-0 z-50 border-b border-blue-100">
@@ -40,33 +41,33 @@ export const Navbar = () => {
               </div>
               <span className="text-xl font-bold text-gray-900">
                 <span className="text-blue-600">Fontanero</span>
-                <span className="text-blue-800">Coruña</span>
+                <span className="text-blue-800">Vigo</span>
                 <span className="text-blue-500 text-sm ml-2 bg-blue-100 px-2 py-0.5 rounded-full">24h</span>
               </span>
             </Link>
 
             {/* Menú desktop premium */}
             <nav className="hidden md:flex items-center space-x-2">
-              <Link 
-                href="/#servicios" 
+              <Link
+                href="/#servicios"
                 className="px-4 py-2 text-gray-700 hover:text-blue-600 font-medium transition-colors hover:bg-blue-50 rounded-lg"
               >
                 Servicios
               </Link>
-              <Link 
-                href="/#cobertura" 
+              <Link
+                href="/#cobertura"
                 className="px-4 py-2 text-gray-700 hover:text-blue-600 font-medium transition-colors hover:bg-blue-50 rounded-lg"
               >
                 Zonas
               </Link>
-              <Link 
-                href="/#nosotros" 
+              <Link
+                href="/#nosotros"
                 className="px-4 py-2 text-gray-700 hover:text-blue-600 font-medium transition-colors hover:bg-blue-50 rounded-lg"
               >
                 Sobre Nosotros
               </Link>
-              <Link 
-                href="/#contacto" 
+              <Link
+                href="/#contacto"
                 className="px-4 py-2 text-gray-700 hover:text-blue-600 font-medium transition-colors hover:bg-blue-50 rounded-lg"
               >
                 Contacto
@@ -102,28 +103,28 @@ export const Navbar = () => {
         {mobileMenuOpen && (
           <div className="md:hidden bg-white/95 backdrop-blur-sm border-t border-blue-100 shadow-lg">
             <div className="px-4 pt-3 pb-5 space-y-2">
-              <Link 
+              <Link
                 href="#servicios"
                 onClick={() => setMobileMenuOpen(false)}
                 className="block px-4 py-3 text-gray-700 hover:text-blue-600 hover:bg-blue-50 rounded-lg font-medium border-b border-blue-50"
               >
                 Servicios
               </Link>
-              <Link 
+              <Link
                 href="#cobertura"
                 onClick={() => setMobileMenuOpen(false)}
                 className="block px-4 py-3 text-gray-700 hover:text-blue-600 hover:bg-blue-50 rounded-lg font-medium border-b border-blue-50"
               >
                 Zonas
               </Link>
-              <Link 
+              <Link
                 href="#nosotros"
                 onClick={() => setMobileMenuOpen(false)}
                 className="block px-4 py-3 text-gray-700 hover:text-blue-600 hover:bg-blue-50 rounded-lg font-medium border-b border-blue-50"
               >
                 Sobre Nosotros
               </Link>
-              <Link 
+              <Link
                 href="#contacto"
                 onClick={() => setMobileMenuOpen(false)}
                 className="block px-4 py-3 text-gray-700 hover:text-blue-600 hover:bg-blue-50 rounded-lg font-medium border-b border-blue-50"

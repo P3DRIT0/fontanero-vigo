@@ -1,7 +1,7 @@
 'use client'
 
 import Link from 'next/link'
-import { FaPhone, FaWhatsapp, FaEnvelope, FaMapMarkerAlt, FaShieldAlt} from 'react-icons/fa'
+import { FaPhone, FaWhatsapp, FaEnvelope, FaMapMarkerAlt, FaShieldAlt,FaRegCalendarAlt} from 'react-icons/fa'
 import { FaTools } from 'react-icons/fa';
 
 import { SITE_CONFIG } from '@/config/site'
@@ -25,11 +25,11 @@ export const Footer = () => {
           {/* Información con logo */}
           <div>
             <h3 className="text-3xl font-bold mb-6">
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-300 to-blue-100">Fontanero</span>
-              <span className="text-white">Vigo24h</span>
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-300 to-blue-100">Fontaneros</span>
+              <span className="text-white">Vigo</span>
             </h3>
             <p className="mb-6 text-blue-200 leading-relaxed">
-              Servicio profesional de fontanería en Vigo y alrededores. Más de 15 años resolviendo emergencias con tecnología avanzada y atención personalizada.
+              Servicio profesional de <strong>fontanería en Vigo</strong> y alrededores. <strong>Fontaneros urgentes</strong> con respuesta en menos de 45 minutos. Más de 15 años resolviendo <strong>reparaciones de bajantes</strong> y emergcias.
             </p>
             <div className="flex space-x-5">
               <a
@@ -57,16 +57,16 @@ export const Footer = () => {
               <div className="bg-blue-500 p-2 rounded-lg">
                 <FaTools className="text-white" />
               </div>
-              <span>Nuestros servicios</span>
+              <span>Servicios de fontanería</span>
             </h4>
             <ul className="space-y-4">
               {[
-                "Desatascos urgentes",
-                "Reparación de fugas",
-                "Instalación de grifería",
-                "Fontanería 24 horas",
-                "Cambio de calentadores",
-                "Mantenimiento de comunidades"
+                "Desatascos urgentes 24h",
+                "Reparación de fugas y bajantes",
+                "Fontaneros a domicilio en Vigo",
+                "Emergencias de fontanería",
+                "Mantenimiento de comunidades",
+                "Instalación de calentadores"
               ].map((service, i) => (
                 <li key={i}>
                   <Link
@@ -89,18 +89,18 @@ export const Footer = () => {
               <div className="bg-blue-500 p-2 rounded-lg">
                 <FaMapMarkerAlt className="text-white" />
               </div>
-              <span>Zonas atendidas</span>
+              <span>Fontaneros en Vigo</span>
             </h4>
             <ul className="space-y-4">
               {[
-                "Vigo centro",
-                "Casco Vello",
-                "Teis",
-                "Coia",
-                "Samil",
-                "Bouzas",
-                "Navia",
-                "Cabral"
+                "Fontaneros Vigo Centro",
+                "Fontaneros Coia",
+                "Fontaneros Teis",
+                "Fontaneros Bouzas",
+                "Fontaneros Navia",
+                "Fontaneros Alcabre",
+                "Fontaneros Redondela",
+                "Fontaneros Nigrán"
               ].map((zone, i) => (
                 <li key={i} className="flex items-start text-blue-200 hover:text-white transition-colors group">
                   <span className="bg-white/10 group-hover:bg-blue-500 rounded-full w-6 h-6 flex items-center justify-center mt-0.5 mr-3 transition-colors">
@@ -116,9 +116,9 @@ export const Footer = () => {
           <div>
             <h4 className="text-xl font-bold mb-6 text-white flex items-center gap-3">
               <div className="bg-blue-500 p-2 rounded-lg">
-                <FaPhone className="text-white" />
+                <FaRegCalendarAlt  className="text-white" />
               </div>
-              <span>Contacto urgente</span>
+              <span>Fontanero urgente</span>
             </h4>
             <ul className="space-y-6">
               <li>
@@ -131,7 +131,7 @@ export const Footer = () => {
                   </span>
                   {SITE_CONFIG.contact.phone}
                 </a>
-                <p className="text-blue-200 text-sm mt-2 pl-16">Servicio 24 horas</p>
+                <p className="text-blue-200 text-sm mt-2 pl-16">Fontanero 24 horas en Vigo</p>
               </li>
 
               <li>
@@ -144,6 +144,7 @@ export const Footer = () => {
                   </span>
                   {SITE_CONFIG.contact.email}
                 </a>
+                <p className="text-blue-200 text-sm mt-2 pl-16">Presupuesto sin compromiso</p>
               </li>
 
               <li className="flex items-center gap-4">
@@ -151,32 +152,22 @@ export const Footer = () => {
                   <FaShieldAlt className="text-white" />
                 </span>
                 <div>
-                  <p className="text-white font-semibold">Garantía en todos los trabajos</p>
-                  <p className="text-blue-200 text-sm">Hasta 2 años de cobertura</p>
+                  <p className="text-white font-semibold">Garantía en reparaciones</p>
+                  <p className="text-blue-200 text-sm">Fontaneros certificados en Vigo</p>
                 </div>
               </li>
             </ul>
           </div>
         </div>
 
-        {/* Divider con efecto premium */}
-        <div className="relative my-12">
-          <div className="absolute inset-0 flex items-center">
-            <div className="w-full border-t border-blue-700/50"></div>
-          </div>
-          <div className="relative flex justify-center">
-            <span className="bg-gradient-to-br from-blue-900 to-blue-800 px-6 text-blue-300 text-sm">
-              {SITE_CONFIG.name} - Fontanería profesional en Vigo
-            </span>
-          </div>
-        </div>
+      
 
         {/* Copyright y legales */}
         <div className="flex flex-col md:flex-row justify-between items-center">
           <p className="text-blue-300 text-sm mb-4 md:mb-0">
             © {currentYear} {SITE_CONFIG.name}. Todos los derechos reservados.
           </p>
-          <div className="flex flex-wrap justify-center gap-4 md:gap-6">
+          <div className="flex flex-col w-full lg:w-[400px] lg:flex-row lg:flex-wrap justify-center gap-4 md:gap-6">
             <Link href="/politica-privacidad" className="text-blue-300 hover:text-white text-sm transition-colors">
               Política de privacidad
             </Link>
@@ -184,10 +175,7 @@ export const Footer = () => {
               Aviso legal
             </Link>
             <Link href="/cookies" className="text-blue-300 hover:text-white text-sm transition-colors">
-              Cookies
-            </Link>
-            <Link href="/sitemap.xml" className="text-blue-300 hover:text-white text-sm transition-colors">
-              Mapa del sitio
+              Politica de cookies
             </Link>
           </div>
         </div>

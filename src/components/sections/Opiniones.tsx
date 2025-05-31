@@ -8,8 +8,7 @@ const Opiniones: React.FC = () => {
       name: 'María López',
       location: 'Teis, Vigo',
       rating: 5,
-      content: 'Increíble servicio a las 2am por una fuga de agua. Llegaron en 25 minutos y solucionaron el problema sin hacer obras. ¡Los recomiendo totalmente!',
-     
+      content: 'Llamé a estos fontaneros en Vigo a las 2am por una fuga de agua y en 25 minutos ya estaban aquí. Solucionaron el problema sin necesidad de hacer obras. ¡Son los mejores fontaneros 24 horas que he encontrado!',
       date: '15/05/2023'
     },
     {
@@ -17,17 +16,15 @@ const Opiniones: React.FC = () => {
       name: 'Carlos Rodríguez',
       location: 'Coia, Vigo',
       rating: 5,
-      content: 'Presupuesto claro y trabajo impecable. Cambiaron todo el sistema de tuberías de mi casa antigua sin ensuciar nada. Profesionales al 100%.',
-     
+      content: 'Necesitaba un fontanero a domicilio en Vigo para cambiar las tuberías de mi casa antigua. El presupuesto fue claro desde el principio y el trabajo impecable. No ensuciaron nada y fueron muy profesionales.',
       date: '22/04/2023'
     },
     {
       id: 3,
-      name: 'Comunidad de Vecinos San Nicolás',
+      name: 'Ana Lopez',
       location: 'Vigo Centro',
       rating: 4,
-      content: 'Llevamos 3 años con su servicio de mantenimiento y cero problemas. Rápida respuesta en las urgencias y trato excelente con los vecinos.',
-     
+      content: 'Contratamos su servicio de fontanería en Vigo para el mantenimiento de nuestro edificio. En 3 años han resuelto todas nuestras urgencias, incluyendo reparaciones de bajantes, con rapidez y eficacia.',
       date: '03/06/2023'
     },
     {
@@ -35,14 +32,13 @@ const Opiniones: React.FC = () => {
       name: 'Ana Martínez',
       location: 'Navia, Vigo',
       rating: 5,
-      content: 'Instalaron mi baño nuevo exactamente como lo quería. El fontanero fue paciente con todos mis cambios y el resultado superó mis expectativas.',
-     
+      content: 'El fontanero que vino a instalarme el baño nuevo entendió perfectamente lo que quería. Entre todos los fontaneros en Vigo que consulté, fueron los que ofrecieron mejor relación calidad-precio. ¡Resultado perfecto!',
       date: '30/05/2023'
     }
   ];
 
   return (
-    <section className="relative py-24 overflow-hidden bg-gradient-to-b from-white to-blue-50">
+    <section className="relative py-10  lg:py-20 overflow-hidden bg-gradient-to-b from-white to-blue-50">
       {/* Elemento decorativo */}
       <div className="absolute top-20 left-0 opacity-10">
         <svg width="300" height="300" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
@@ -58,7 +54,7 @@ const Opiniones: React.FC = () => {
               <span className="absolute inset-x-0 bottom-2 h-3 bg-blue-200/50 z-0"></span>
               <span className="relative z-10">Opiniones Reales</span>
             </span>
-            <br />de <span className="text-blue-600">Clientes en Vigo</span>
+            <br />de Nuestros <span className="text-blue-600">Clientes en Vigo</span>
           </h2>
           <div className="flex justify-center items-center">
             <div className="flex mr-4">
@@ -71,16 +67,15 @@ const Opiniones: React.FC = () => {
         </div>
 
         {/* Grid de testimonios */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
+        <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-8 mb-16">
           {testimonials.map((testimonial) => (
             <div 
               key={testimonial.id} 
-              className="bg-white rounded-2xl shadow-lg overflow-hidden border border-gray-100 hover:shadow-xl transition-shadow duration-300"
+              className="bg-white rounded-2xl shadow-lg overflow-hidden border border-gray-100 hover:shadow-xl transition-shadow duration-300 flex flex-col justify-between"
             >
-              <div className="p-6">
+              <div className="p-6 ">
                 <div className="flex justify-between items-start mb-4">
                   <div className="flex items-center">
-                 
                     <div>
                       <h4 className="font-bold text-gray-900">{testimonial.name}</h4>
                       <p className="text-sm text-gray-500">{testimonial.location}</p>
@@ -116,33 +111,37 @@ const Opiniones: React.FC = () => {
         </div>
 
         {/* CTA con nuevo diseño */}
-        <div className="text-center">
-          <div className="inline-flex flex-col sm:flex-row items-center justify-center bg-gradient-to-r from-blue-600 to-blue-500 rounded-full shadow-xl overflow-hidden">
-            <a 
-              href="#contacto" 
-              className="flex items-center justify-center bg-white hover:bg-gray-50 text-blue-600 font-bold py-4 px-8 transition-colors"
-            >
-              <span className="mr-3">Deja tu opinión</span>
-              <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-                <path fillRule="evenodd" d="M18 10c0 3.866-3.582 7-8 7a8.841 8.841 0 01-4.083-.98L2 17l1.338-3.123C2.493 12.767 2 11.434 2 10c0-3.866 3.582-7 8-7s8 3.134 8 7zM7 9H5v2h2V9zm8 0h-2v2h2V9zM9 9h2v2H9V9z" clipRule="evenodd"></path>
-              </svg>
-            </a>
-            <a 
-              href="https://g.page/r/Cd.../review" 
-              target="_blank" 
-              rel="noopener noreferrer"
-              className="flex items-center justify-center text-white font-medium py-4 px-8 hover:bg-blue-700 transition-colors"
-            >
-              <span className="mr-3">Ver todas las opiniones</span>
-              <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-                <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-8.707l-3-3a1 1 0 00-1.414 0l-3 3a1 1 0 001.414 1.414L9 9.414V13a1 1 0 102 0V9.414l1.293 1.293a1 1 0 001.414-1.414z" clipRule="evenodd"></path>
-              </svg>
-            </a>
-          </div>
-          <p className="mt-4 text-gray-500 text-sm">
-            Más de 500 clientes satisfechos nos avalan en Vigo y alrededores
-          </p>
-        </div>
+     <div className="text-center">
+  <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+    {/* Botón Deja tu opinión */}
+    <a 
+      href="#contacto" 
+      className="w-full sm:w-auto flex-shrink-0 flex items-center justify-center bg-white hover:bg-gray-50 text-blue-600 font-bold py-4 px-6 rounded-full shadow-md hover:shadow-lg transition-all duration-300 border border-blue-100"
+    >
+      <span className="mr-3">Deja tu opinión</span>
+      <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+        <path fillRule="evenodd" d="M18 10c0 3.866-3.582 7-8 7a8.841 8.841 0 01-4.083-.98L2 17l1.338-3.123C2.493 12.767 2 11.434 2 10c0-3.866 3.582-7 8-7s8 3.134 8 7zM7 9H5v2h2V9zm8 0h-2v2h2V9zM9 9h2v2H9V9z" clipRule="evenodd"></path>
+      </svg>
+    </a>
+
+    {/* Botón Ver opiniones */}
+    <a 
+      href="https://g.page/r/Cd.../review" 
+      target="_blank" 
+      rel="noopener noreferrer"
+      className="w-full sm:w-auto flex-shrink-0 flex items-center justify-center bg-gradient-to-r from-blue-600 to-blue-500 hover:from-blue-700 hover:to-blue-600 text-white font-bold py-4 px-6 rounded-full shadow-md hover:shadow-lg transition-all duration-300"
+    >
+      <span className="mr-3">Ver opiniones</span>
+      <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+        <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-8.707l-3-3a1 1 0 00-1.414 0l-3 3a1 1 0 001.414 1.414L9 9.414V13a1 1 0 102 0V9.414l1.293 1.293a1 1 0 001.414-1.414z" clipRule="evenodd"></path>
+      </svg>
+    </a>
+  </div>
+
+  <p className="mt-4 text-gray-500 text-sm">
+    Más de 500 clientes en Vigo confían en nuestros <strong>fontaneros 24 horas</strong> y <strong>reparación de bajantes</strong>
+  </p>
+</div>
       </div>
     </section>
   );
