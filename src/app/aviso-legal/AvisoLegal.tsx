@@ -75,7 +75,7 @@ export const LegalNotice = () => {
 
               <h3 className="font-semibold text-gray-800 mt-6 mb-3">1. Objeto</h3>
               <p className="mb-6">
-                El presente aviso legal regula el acceso y uso del sitio web <strong>https://cerrajeroscoruña.com</strong> que Exyo Developers SLU 
+                El presente aviso legal regula el acceso y uso del sitio web <strong>https://fontanerovigo.com</strong> que Exyo Developers SLU 
                 pone a disposición de los usuarios para informar sobre sus servicios y actividades.
               </p>
 

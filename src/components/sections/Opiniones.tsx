@@ -89,7 +89,7 @@ const Opiniones: React.FC = () => {
                 
                 <div className="relative mb-4">
                   <FaQuoteLeft className="absolute -top-2 left-0 text-blue-100 text-3xl" />
-                  <p className="text-gray-600 pl-8 relative z-10">{testimonial.content}</p>
+                  <p className="text-gray-600 pl-8 relative z-10 ml-2">{testimonial.content}</p>
                 </div>
                 
                 <div className="text-sm text-gray-400">{testimonial.date}</div>
